@@ -13,12 +13,13 @@ public class Main {
 
     }
     public static void DisplaySea(int x, int y){
-        char[][] sea = new char[x][y];
+        String[][] sea = new String[x][y];
         displayColumns(sea.length);
         for (int row = 0; row < sea.length; row++){
             System.out.print(row + " |");
             for (int col = 0; col < sea[row].length; col++){
-                System.out.print(" ");
+                sea[row][col] = " ";
+                System.out.print(sea[row][col]);
             }
             System.out.println("| " + row);
         }
