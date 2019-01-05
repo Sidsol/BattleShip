@@ -44,7 +44,13 @@ public class Main {
                 if (sea[row][col] == "1"){
                     System.out.print("@");
                 }
-                else if (sea[row][col] == "2"){
+                else if (sea[row][col] == "!"){
+                    System.out.print(sea[row][col]);
+                }
+                else if (sea[row][col] == "x"){
+                    System.out.print(sea[row][col]);
+                }
+                else if (sea[row][col] == "-"){
                     System.out.print(sea[row][col]);
                 }
                 else{
@@ -132,12 +138,12 @@ public class Main {
                 if (sea[xCoordinate][yCoordinate] == "1"){
                     System.out.println("Oh no, you sunk your own ship :(");
                     sea[xCoordinate][yCoordinate] = "x";
-                    npcScore--;
+                    playerScore--;
                 }
                 else {
                     System.out.println("Boom! You sunk the ship!");
                     sea[xCoordinate][yCoordinate] = "!";
-                    playerScore--;
+                    npcScore--;
                 }
             }
             else {
@@ -153,12 +159,12 @@ public class Main {
                 if (sea[xCoordinate][yCoordinate] == "2"){
                     System.out.println("The Computer sunk one of its own ships.");
                     sea[xCoordinate][yCoordinate] = "!";
-                    playerScore--;
+                    npcScore--;
                 }
                 else {
                     System.out.println("The Computer sunk one of your ships!");
                     sea[xCoordinate][yCoordinate] = "x";
-                    npcScore--;
+                    playerScore--;
                 }
             }
             else {
